@@ -1,0 +1,226 @@
+Background{
+street = [site/backgrounds/0.jpg];
+street2 = [site/backgrounds/0.jpg];
+}
+Character{
+Amy{
+angry = [site/characters/1.png];
+shy = [site/characters/2.png];
+happy = [site/characters/3.png];
+normal = [site/characters/4.png];
+confused = [site/characters/5.png];
+}
+Bob{
+normal = [site/characters/6.png];
+happy = [site/characters/7.png];
+confused = [site/characters/8.png];
+angry = [site/characters/9.png];
+shy = [site/characters/10.png];
+}
+}
+
+Start:
+street background;
+Amy enters;
+Amy feels happy;
+Bob enters;
+Bob says "Hi there Amy! It's nice to see you here!";
+Amy says "Hi Bob!";
+Bob feels shy;
+Amy says "Hey Bob! You are blushing!";
+Bob says "Uhhh Amy, I just wanted to invite you to my house, Are you free later?";
+Choices: 
+(Chaptera)"Really? That's great! Then, let's just meet later at 1pm.";
+or
+(Chapterb)"Sorry Bob, but I still have a lot of home works to do.";
+
+
+Chaptera:
+street background;
+Amy says "Really? That's great! Then, let's just meet later at 1pm.";
+Bob feels happy;
+Bob says "Alright! I'd be expecting you to see you later!";
+Amy says "I'll be leaving now, Bye Bob!";
+Amy leaves;
+Bob leaves;
+
+Chapterb:
+street background;
+Amy feels confused;
+Amy says "Sorry Bob, but I still have a lot of home works to do.";
+Bob feels confused;
+Bob says "Ohh really? Maybe we can do that next time when you're free.";
+Amy says "Sorry Bob!";
+Bob says "It's okay Amy, I understand.";
+Bob feels happy;
+Amy says "I am going home now Bob, see you around!";
+Bob says "See you around Amy!";
+Amy leaves;
+Bob leaves;
+
+
+
+
+
+
+
+
+
+
+
+
+function reloadKeys_start()
+{
+	sprites = ['grin_eliza','ballroom_day','ballroom_night','cg_angish'];
+	characters = ['Eliza', 'John'];
+}
+
+function loadChapter_start()
+{
+
+currentChapter = 
+[
+	{speaker:"Eliza", message:"Hi I am trying out the moment list.", commands:"changeBackgroundFade(\"ballroom_day\")"},
+	{speaker:"Eliza", message:"Hi I am trying out the moment list.", commands:"addCharacterScroll(\"Eliza\")"},
+	{speaker:"Eliza", message:"Hi I am trying out the moment list.", commands:"changeCharacter(\"Eliza\", \"grin_eliza\")"},
+	{speaker:"Eliza", message:"Hi I am trying out the moment list.", commands:"addCharacterFade(\"John\")"},
+	{speaker:"Eliza", message:"Hi I am trying out the moment list.", commands:"removeCharacterScroll(\"John\"); removeCharacterScroll(\"Eliza\");"},
+	{speaker:"Eliza", message:"Hi I am trying out the moment list.", commands:"addBranch(\"This is try1\", \"try1\");addBranch(\"This is try2\", \"try2\");"},
+];
+
+}
+
+function reloadKeys_try1()
+{
+	
+}
+
+function loadChapter_try1()
+{
+
+currentChapter = 
+[
+	{speaker:"Eliza", message:"Yes success 1!", commands:"removeCharacterScrollRight(\"Eliza\")"},
+];
+
+}
+
+function reloadKeys_try2()
+{
+	
+}
+
+function loadChapter_try2()
+{
+
+currentChapter = 
+[
+	{speaker:"Eliza", message:"Yes success 2!", commands:""},
+];
+
+}
+
+function reloadKeys_try3()
+{
+	
+}
+
+function loadChapter_try3()
+{
+
+currentChapter = 
+[
+	{speaker:"Eliza", message:"Yes success! 3", commands:""},
+];
+
+}
+
+
+/*
+Sprite is 1
+Background is 2
+Graphics is 3
+*/
+
+var assetLibrary = 
+[
+	//Sprites
+	{id: 'blank_john', src: 'assets/characters/boy/blank.png', type: 1},
+	{id: 'angry1_john', src: 'assets/characters/boy/angry1.png', type: 1},
+	{id: 'angry2_john', src: 'assets/characters/boy/angry2.png', type: 1},
+	{id: 'confused_john', src: 'assets/characters/boy/confused.png', type: 1},
+	{id: 'curious_john', src: 'assets/characters/boy/curious.png', type: 1},
+	{id: 'sad_john', src: 'assets/characters/boy/sad.png', type: 1},
+	{id: 'skeptical_john', src: 'assets/characters/boy/skeptical.png', type: 1},
+	{id: 'sleep_john', src: 'assets/characters/boy/sleep.png', type: 1},
+	{id: 'surprised_john', src: 'assets/characters/boy/surprised.png', type: 1},
+	{id: 'terrified_john', src: 'assets/characters/boy/terrified.png', type: 1},
+	{id: 'tired_john', src: 'assets/characters/boy/tired.png', type: 1},
+	
+	{id: 'blank_eliza', src: 'assets/characters/fiend/blank.png', type: 1},
+	{id: 'alert_eliza', src: 'assets/characters/fiend/alert.png', type: 1},
+	{id: 'angry_eliza', src: 'assets/characters/fiend/angry.png', type: 1},
+	{id: 'distant_eliza', src: 'assets/characters/fiend/distant.png', type: 1},
+	{id: 'distant_bitter_eliza', src: 'assets/characters/fiend/distant_bitter.png', type: 1},
+	{id: 'distant_looking_eliza', src: 'assets/characters/fiend/distant_looking.png', type: 1},
+	{id: 'distant_smile_eliza', src: 'assets/characters/fiend/distant_smile.png', type: 1},
+	{id: 'embarassed_eliza', src: 'assets/characters/fiend/embarassed.png', type: 1},
+	{id: 'excited_eliza', src: 'assets/characters/fiend/excited.png', type: 1},
+	{id: 'focused_eliza', src: 'assets/characters/fiend/focused.png', type: 1},
+	{id: 'grin_eliza', src: 'assets/characters/fiend/grin.png', type: 1},
+	{id: 'laugh_eliza', src: 'assets/characters/fiend/laugh.png', type: 1},
+	{id: 'sad_eliza', src: 'assets/characters/fiend/sad.png', type: 1},
+	{id: 'smile_eliza', src: 'assets/characters/fiend/smile.png', type: 1},
+	{id: 'surprised_eliza', src: 'assets/characters/fiend/surprised.png', type: 1},
+	{id: 'talking_eliza', src: 'assets/characters/fiend/talking.png', type: 1},
+	{id: 'talking_irritated_eliza', src: 'assets/characters/fiend/talking_irritated.png', type: 1},
+	{id: 'thinking_eliza', src: 'assets/characters/fiend/thinking.png', type: 1},
+	
+	//Backgrounds
+	{id: 'ballroom_day', src: 'assets/backgrounds/ballroom_day.png', type: 2},
+	{id: 'ballroom_sunset', src: 'assets/backgrounds/ballroom_sunset.png', type: 2},
+	{id: 'ballroom_night', src: 'assets/backgrounds/ballroom_night.png', type: 2},
+	{id: 'ballroom_extend day', src: 'assets/backgrounds/ballroom_extend_day.png', type: 2},
+	{id: 'ballroom_extend sunset', src: 'assets/backgrounds/ballroom_extend_sunset.png', type: 2},
+	{id: 'ballroom_extend night', src: 'assets/backgrounds/ballroom_extend_night.png', type: 2},
+	
+	//Graphics
+	{id: 'cg_angish', src: 'assets/graphics/cg0.png', type: 3},
+	{id: 'cg_pity', src: 'assets/graphics/cg0_face2.png', type: 3},
+	{id: 'cg_hatred', src: 'assets/graphics/cg1.png', type: 3},
+	{id: 'cg_regret', src: 'assets/graphics/cg1_face1.png', type: 3},
+	{id: 'cg_hopeless', src: 'assets/graphics/cg1_face2.png', type: 3},
+	{id: 'cg_escape', src: 'assets/graphics/cg2.png', type: 3},
+	{id: 'cg_pain', src: 'assets/graphics/cg2_face1.png', type: 3},
+	{id: 'cg_saving', src: 'assets/graphics/cg3.png', type: 3},
+	{id: 'cg_rescue', src: 'assets/graphics/cg4.png', type: 3},
+	{id: 'cg_free', src: 'assets/graphics/cg5.png', type: 3},
+	{id: 'cg_future', src: 'assets/graphics/cg6.png', type: 3},
+	{id: 'cg_fire', src: 'assets/graphics/in0.png', type: 3},
+	{id: 'cg_hand', src: 'assets/graphics/in1.png', type: 3},
+	{id: 'cg_floor', src: 'assets/graphics/in2.png', type: 3},
+	{id: 'cg_floor_night', src: 'assets/graphics/in2_night.png', type: 3},
+	{id: 'cg_peek', src: 'assets/graphics/in3.png', type: 3},
+	{id: 'cg_floor_fire', src: 'assets/graphics/in4.png', type: 3},
+	{id: 'cg_boy_and_fiend', src: 'assets/graphics/in5.png', type: 3},
+	{id: 'cg_plant', src: 'assets/graphics/in6.png', type: 3},
+	{id: 'cg_planted', src: 'assets/graphics/in6_plant.png', type: 3},
+	{id: 'cg_stepping_out', src: 'assets/graphics/in8.png', type: 3},
+	{id: 'cg_night_sky', src: 'assets/graphics/in9.png', type: 3},
+	{id: 'cg_holding_hands', src: 'assets/graphics/in10.png', type: 3},
+];
+
+var characterLibrary = 
+[
+	//Character 1
+	{
+		id: "John", 
+		sprite: "blank_john" //Initial sprite of the character
+	},
+	
+	//Character 2
+	{
+		id: "Eliza", 
+		sprite: "blank_eliza"
+	},
+];

@@ -1,0 +1,98 @@
+Try1:
+Eliza says "Yes success 1!";
+
+CG {
+	cg_angish = [assets/graphics/cg0.png];
+	cg_pity = [assets/graphics/cg0_face2.png];
+	cg_hatred = [assets/graphics/cg1.png];
+	cg_regret = [assets/graphics/cg1_face1.png];
+	cg_hopeless = [assets/graphics/cg1_face2.png];
+	cg_escape = [assets/graphics/cg2.png];
+	cg_pain = [assets/graphics/cg2_face1.png];
+	cg_saving = [assets/graphics/cg3.png];
+	cg_rescue = [assets/graphics/cg4.png];
+	cg_free = [assets/graphics/cg5.png];
+	cg_future = [assets/graphics/cg6.png];
+	cg_fire = [assets/graphics/in0.png];
+	cg_hand = [assets/graphics/in1.png];
+	cg_floor = [assets/graphics/in2.png];
+	cg_floor_night = [assets/graphics/in2_night.png];
+	cg_peek = [assets/graphics/in3.png];
+	cg_floor_fire = [assets/graphics/in4.png];
+	cg_boy_and_fiend = [assets/graphics/in5.png];
+	cg_plant = [assets/graphics/in6.png];
+	cg_planted = [assets/graphics/in6_plant.png];
+	cg_stepping_out = [assets/graphics/in8.png];
+	cg_night_sky = [assets/graphics/in9.png];
+	cg_holding_hands = [assets/graphics/in10.png];
+}
+
+Try2:
+Eliza says "Yes success 2!";
+
+Background {
+	ballroom_day = [assets/backgrounds/ballroom_day.png];
+	ballroom_sunset = [assets/backgrounds/ballroom_sunset.png];
+	ballroom_night = [assets/backgrounds/ballroom_night.png];
+	ballroom_extend_day = [assets/backgrounds/ballroom_extend_day.png];
+	ballroom_extend_sunset = [assets/backgrounds/ballroom_extend_sunset.png];
+	ballroom_extend_night = [assets/backgrounds/ballroom_extend_night.png];
+}
+
+Start:
+Eliza says "Hi I am trying out the moment list.",
+ballroom_day background;
+Eliza says "Hi I am trying out the moment list.",
+Eliza enters;
+Eliza says "Hi I am trying out the moment list.",
+Eliza says "Something";
+Eliza says "Hi I am trying out the moment list.",
+Eliza feels grin;
+Eliza says "Hi I am trying out the moment list.",
+John enters;
+Eliza says "Hi I am trying out the moment list.",
+John leaves,
+Eliza leaves;
+Choices: (Try1) "This is try1"; or 
+		 (Try2) "This is try2"; or
+		 (Try3) "This is try3"; 
+
+Try3:
+Eliza says "Yes success 3!";
+
+Character {
+	John {
+		blank = [assets/characters/boy/blank.png];
+		angry1 = [assets/characters/boy/angry1.png];
+		angry2 = [assets/characters/boy/angry2.png];
+		confused = [assets/characters/boy/confused.png];
+		curious = [assets/characters/boy/curious.png];
+		sad = [assets/characters/boy/sad.png];
+		skeptical = [assets/characters/boy/skeptical.png];
+		sleep = [assets/characters/boy/sleep.png];
+		surprised = [assets/characters/boy/surprised.png];
+		terrified = [assets/characters/boy/terrified.png];
+		tired = [assets/characters/boy/tired.png];
+	}
+	
+	Eliza {
+		blank = [assets/characters/fiend/blank.png];
+		alert = [assets/characters/fiend/alert.png];
+		angry = [assets/characters/fiend/angry.png];
+		distant = [assets/characters/fiend/distant.png];
+		distant_bitter = [assets/characters/fiend/distant_bitter.png];
+		distant_looking = [assets/characters/fiend/distant_looking.png];
+		distant_smile = [assets/characters/fiend/distant_smile.png];
+		embarassed = [assets/characters/fiend/embarassed.png];
+		excited = [assets/characters/fiend/excited.png];
+		focused = [assets/characters/fiend/focused.png];
+		grin = [assets/characters/fiend/grin.png];
+		laugh = [assets/characters/fiend/laugh.png];
+		sad = [assets/characters/fiend/sad.png];
+		smile = [assets/characters/fiend/smile.png];
+		surprised = [assets/characters/fiend/surprised.png];
+		talking = [assets/characters/fiend/talking.png];
+		talking_irritated = [assets/characters/fiend/talking_irritated.png];
+		thinking = [assets/characters/fiend/thinking.png];
+	}
+}
